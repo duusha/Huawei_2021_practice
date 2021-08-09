@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-struct s {
+typedef struct s {
 	int a, b ,c;
 	char d;
 };

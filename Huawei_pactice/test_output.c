@@ -1,11 +1,13 @@
-struct s1 {
+typedef struct _s1 {
 	int a;
 	int b;
-}
-struct s2 {
+}_s1;
+_s1 s1;
+typedef struct _s2 {
 	int c;
 	char d;
-}
+}_s2;
+_s2 s2;
 int main()
 {
   int a = 1;

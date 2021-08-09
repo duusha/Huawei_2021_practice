@@ -28,9 +28,9 @@ def script(start, end, decls, struct_name, hot):
 
 	for num, line in enumerate(f_in.readlines()):
 		if num == line_start:
-			f_out.write('struct ' + struct_name + '1 {\n' + struct_1_inp + '}\n')
+			f_out.write('typedef struct _' + struct_name + '1 {\n' + struct_1_inp + '}' + '_' + struct_name + '1;' + '\n' + '_' + struct_name + '1 ' + struct_name + '1;\n')
 		if (num == line_end):
-			f_out.write('struct ' + struct_name + '2 {\n' + struct_2_inp + '}\n')
+			f_out.write('typedef struct _' + struct_name + '2 {\n' + struct_2_inp + '}' + '_' + struct_name + '2;'+ '\n' + '_' + struct_name + '2 ' + struct_name + '2;\n')
 		#if (num not in range(line_start - 1, line_end)):
 		#	f_out.write(line)
 	f_in.close()
